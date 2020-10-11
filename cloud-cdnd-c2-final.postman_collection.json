@@ -69,10 +69,9 @@
 	],
 	"variable": [
 		{
-			"id": "1df3d31a-de30-494b-a3d0-f1228dd8713c",
+			"id": "c3e1424c-b4e5-47d9-b471-3e36e6282dd4",
 			"key": "HOST",
-			"value": "localhost:8082",
-			"type": "string"
+			"value": "udacity-image-filtering-dev.us-west-2.elasticbeanstalk.com"
 		}
 	],
 	"protocolProfileBehavior": {}
