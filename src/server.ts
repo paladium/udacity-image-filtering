@@ -48,9 +48,9 @@ export function requireAuth(req: Request, res: Response, next: NextFunction){
 
     /**************************************************************************** */
 
-    app.get("/filteredimage", requireAuth, async (req, res) => {
-        const { image_url } = req.query;
-        if (!image_url || image_url == "") {
+    app.get("/filteredimage", requireAuth, async (req: Request, res: Response) => {
+        const image_url = req.query.image_url as string;
+        if (image_url == "") {
             res.status(400).send("image_url is required");
             return;
         }
@@ -63,7 +63,7 @@ export function requireAuth(req: Request, res: Response, next: NextFunction){
 
     // Root Endpoint
     // Displays a simple message to the user
-    app.get("/", async (req, res) => {
+    app.get("/", async (req: Request, res: Response) => {
         res.send("try GET /filteredimage?image_url={{}}")
     });
 
